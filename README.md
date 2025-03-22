@@ -4,6 +4,10 @@
 
 <p align="center">Inspired by <a href="https://github.com/narative/oscura">Fey's Oscura theme</a>, featuring meticulously curated accent colors and precisely balanced contrast, crafting a sophisticated coding environment that's both elegant and easy on the eyes.</p>
 
+<p align="center">
+  <img src="./assets/showcase.png" alt="Oscura Theme Screenshot" width="800" />
+</p>
+
 ## ✔️ Requirements
 
 - Neovim >= 0.9.2
