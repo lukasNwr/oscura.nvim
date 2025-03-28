@@ -45,6 +45,25 @@ use 'webhooked/oscura.nvim'
 Plug 'webhooked/oscura.nvim'
 ```
 
+### LazyVim
+
+Add the following to your LazyVim configuration:
+
+```lua
+-- In your plugins.lua file (or equivalent)
+return {
+  {
+    "webhooked/oscura.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {},
+    config = function()
+      vim.cmd.colorscheme "oscura" -- or "oscura-dusk" for the dusk variant
+    end,
+  },
+}
+```
+
 ## 🚀 Usage
 
 ```lua
