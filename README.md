@@ -50,11 +50,17 @@ Plug 'webhooked/oscura.nvim'
 ```lua
 -- Lua:
 vim.cmd[[colorscheme oscura]]
+
+-- Or use the dusk variant (slightly lighter dark background):
+vim.cmd[[colorscheme oscura-dusk]]
 ```
 
 ```vim
 " Vim:
 colorscheme oscura
+
+" Or use the dusk variant (slightly lighter dark background):
+colorscheme oscura-dusk
 ```
 
 ## 🎨 Features
@@ -62,6 +68,7 @@ colorscheme oscura
 Oscura features a carefully crafted dark color palette optimized for long coding sessions:
 
 - Deep, dark background (`#0B0B0F`) that's easy on the eyes
+- Alternate dusk variant with slightly lighter background (`#131419`)
 - Clear syntax highlighting with muted yet distinctive colors
 - Carefully chosen contrast levels to reduce eye strain
 - Minimal visual noise with subtle UI elements
@@ -100,7 +107,7 @@ If you are using [`lualine`](https://github.com/hoob3rt/lualine.nvim), you can e
 require('lualine').setup {
   options = {
     -- ...
-    theme = 'oscura'
+    theme = 'oscura' -- or 'oscura-dusk' for the dusk variant
     -- ...
   }
 }

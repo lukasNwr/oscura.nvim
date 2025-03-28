@@ -113,8 +113,10 @@ local function apply(configs)
       nvim_set_hl(0, group, setting)
    end
    
-   -- Force apply background color to Normal
-   vim.api.nvim_set_hl(0, "Normal", { bg = colors.bg })
+   -- Only force apply background color to Normal if not using transparent background
+   if not configs.transparent_bg then
+      vim.api.nvim_set_hl(0, "Normal", { bg = colors.bg })
+   end
    
    -- Force apply selection color to selection-related highlight groups
    for _, group in ipairs(SELECTION_GROUPS) do
@@ -128,7 +130,12 @@ local function apply(configs)
    for _, group_name in ipairs(SNACKS_MENU_GROUPS) do
       local existing = vim.api.nvim_get_hl(0, { name = group_name })
       if existing then
-         vim.api.nvim_set_hl(0, group_name, { bg = colors.bg })
+         -- Don't set background if transparent_bg is true
+         if configs.transparent_bg then
+            vim.api.nvim_set_hl(0, group_name, {})
+         else
+            vim.api.nvim_set_hl(0, group_name, { bg = colors.bg })
+         end
       end
    end
 end
