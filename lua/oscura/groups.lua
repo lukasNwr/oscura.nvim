@@ -40,7 +40,7 @@ local function setup(configs)
       NormalFloat = { fg = colors.fg, bg = colors.bg },
       Comment = { fg = colors.comment, italic = configs.italics.comments },
       Constant = { fg = colors.fg },
-      String = { fg = colors.teal },
+      String = { fg = colors.orange },
       Character = { fg = colors.yellow },
       Number = { fg = colors.orange },
       Boolean = { fg = colors.red },
